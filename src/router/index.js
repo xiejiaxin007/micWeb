@@ -5,7 +5,6 @@
  */
 import Vue from 'vue';
 import Router from 'vue-router';
-// 引入各个模块的路由
 // 渠道侧
 import bankRepayment from '@/pages/channelSide/bankRepayment/route';
 // 楼盘管理

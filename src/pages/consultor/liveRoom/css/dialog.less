@@ -1,0 +1,81 @@
+/**
+* @Name: 弹窗样式文件
+* @Description: 作用于直播间系统弹窗样式
+* @Author: xiejiaxin
+* @Date: 2020-2-27
+*/
+/**
+* live-dialog-wrapper---类名必须，与已有的弹窗区别开
+* 弹窗设置类名的属性：custom-class
+*/
+.live-dialog-wrapper{
+    width: 520px;
+    box-shadow:0px 2px 10px 0px rgba(125,125,125,0.2);
+    border-radius:8px;
+    &.el-dialog{
+        position: absolute;
+        margin-top: 0 !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 8px;
+    }
+    .el-dialog__header{
+        padding: 30px 24px 24px 24px;
+        .dialog-header{
+            font-family: "PingFangSC-Medium", "Microsoft YaHei";
+        }
+    }
+    .el-dialog__footer{
+        margin-top: 0;
+        padding: 0 24px 30px;
+        .el-button{
+            min-width: 92px;
+            padding: 11px 14px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .el-button--default{
+            border-color: #ddd;
+            color: #222;
+            background-color: #fff;
+            &:hover{
+                border-color: #2776ef;
+                color: #2776ef;
+            }
+        }
+        .el-button--primary{
+            background-color: #2776ef;
+            border-color: #2776ef;
+            &:hover{
+                background:rgba(39,118,239,0.8);
+                border-color: rgba(39,118,239,0.8);
+            }
+        }
+        .el-button{
+            &+.el-button{
+                margin-left: 24px;
+            }
+        }
+    }
+    .dialog-header{
+        line-height: 32px;
+        padding: 0 36px;
+        box-sizing: border-box;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #222;
+        font-size: 24px;
+        .iconclose_dialog{
+            position: absolute;
+            top: 16px;
+            right: 24px;
+            font-size: 16px;
+            color: #888;
+        }
+    }
+    .el-dialog__body{
+        padding: 0 24px 0 24px;
+    }
+}

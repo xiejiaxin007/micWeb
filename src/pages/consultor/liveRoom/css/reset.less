@@ -1,0 +1,22 @@
+/*loading样式*/
+.loading-default-box{
+    /deep/.el-loading-spinner{
+        height: 110px;
+        background: url(../../../../assets/images/img-loading.gif) no-repeat;
+        background-size: 120px 90px;
+        left: 50%;
+        transform: translate(-60px, -45px);
+        .el-icon-loading{
+            display: none;
+        }
+        .el-loading-text{
+            position: absolute;
+            margin: 6px 0 0 0;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            width: 120px;
+            color: #2776ef;
+        }
+    }
+}

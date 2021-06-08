@@ -1,0 +1,298 @@
+/**
+* @Name: 屏幕共享统一样式
+* @Description: 屏幕共享统一样式
+* @Author: xiejiaxin
+* @Date: 2020-2-27
+*/
+.live-room-wrap{
+    font-family: PingFangSC-Regular,PingFang SC;
+    .btn-custom{
+        &.el-button{
+            min-width: 92px;
+            padding: 11px 14px;
+            font-size: 16px;
+            &>span {
+                font-weight: normal;
+            }
+        }
+        &.el-button--default{
+            border-color: #ddd;
+            color: #222;
+            &:hover{
+                border-color: #2776ef;
+                color: #2776ef;
+            }
+        }
+        &.el-button--primary{
+            background-color: #2776ef;
+            border-color: #2776ef;
+            &:hover{
+                background:rgba(39,118,239,0.8);
+                border-color: rgba(39,118,239,0.2);
+            }
+        }
+    }
+}
+.share-form-box{
+    .el-input__inner::-webkit-input-placeholder, .el-textarea__inner::-webkit-input-placeholder {
+        color: #888;
+        font-weight: normal;
+    }
+    .el-input__inner::-moz-placeholder, .el-textarea__inner::-moz-placeholder {
+        color: #888;
+        font-weight: normal;
+    }
+    .el-input__inner:-ms-input-placeholder, .el-textarea__inner:-ms-input-placeholder {
+        color: #888;
+        font-weight: normal;
+    }
+    .el-input__inner:-moz-placeholder, .el-textarea__inner:-moz-placeholder {
+        color: #888;
+        font-weight: normal;
+    }
+    /deep/.el-input{
+        &.is-disabled{
+            .el-input__inner{
+                background-color: #eee;
+                color: #888;
+            }
+        }
+    } 
+    /deep/.el-input__inner{
+        height: 38px;
+        line-height: 38px;
+        padding: 0 12px;
+        border-color: #ddd;
+        color: #222;
+        border-radius: 2px;
+        &:focus{
+            border-color: #2776ef;
+        }
+    }
+    /deep/.el-select{
+        height: 38px;
+        .el-input{
+            &.is-focus{
+                .el-input__inner{
+                    border-color: #2776ef;
+                }
+            }
+        }
+    }
+    /deep/.el-range-editor{
+        &.is-active{
+            &:hover{
+                border-color: #2776ef;
+            }
+        }
+    }
+    /deep/.is-error{
+        .el-input{
+            .el-input__inner{
+                border-color: #f64a4a;
+            }
+        }
+    }
+    /deep/ .el-radio-group{
+        .el-radio{
+            line-height: 20px;
+            color: #333;
+            font-weight: 400;
+        }
+        .el-radio__inner{
+            width: 16px;
+            height: 16px;
+            border-color: #ddd;
+        }
+        .el-radio__label{
+            padding-left: 8px;
+        }
+        .el-radio__input{
+            &.is-checked {
+                .el-radio__inner {
+                    background: #277af0;
+                    border-color: #277af0;
+                }
+                &+.el-radio__label{
+                    color: #333;
+                }
+            }
+        }
+    }
+    &.el-form{
+        .el-form-item{
+            margin: 0 14px 20px 0;
+            &:nth-of-type(even){
+                margin-right: 0;
+            }
+        }
+        .el-form-item__error{
+            padding-top: 4px;
+            line-height: 14px;
+            font-weight: 400;
+            color: #f64a4a;
+        }
+        .is-required{
+            &:not(.is-no-asterisk){
+                &>.el-form-item__label{
+                    &::before{
+                        width: 8px;
+                        margin-right: 0;
+                        line-height: 20px;
+                        font-size: 14px;
+                        color: #f64a4a;
+                    }
+                }
+            }
+        }
+        .el-form-item__label{
+            padding: 0;
+            margin-right: 10px;
+            line-height: 38px;
+            color: #333;
+        }
+        /*靠左的类名*/
+        .item-position-left{
+            .el-form-item__label{
+                text-align: left;
+            }
+        }
+        /*靠右的类名*/
+        .item-position-right{
+            .el-form-item__label{
+                text-align: right;
+            }
+        }
+        /*内容比较长*/
+        .long-form-item{
+            .el-select{
+                .el-input__inner{
+                    padding-right: 24px;
+                }
+            }
+        }
+        .el-form-item__content{
+            width: 180px;
+            line-height: 38px;
+            .el-select{
+                width: 100%;
+            }
+        }
+        // 日期区间选择框
+        .form-date-range-box {
+            * {
+                line-height: 38px;
+            }
+            .el-range-input{
+                background: transparent;
+                color: #222;
+            }
+        }
+    }
+    &.el-form--inline{
+        .float-layout-box{
+            .el-form-item__content{
+                display: block;
+            }
+        }
+    }
+    &.el-form{
+        /*横向百分比form-item*/
+        .float-layout-box{
+            display: flex;
+            margin-right: 0;
+            .el-form-item__content{
+                flex: 1;
+            }
+            .el-form-item__label{
+                float: left;
+            }
+        }
+        /*竖向百分比form-item*/
+        .ver-form-item{
+            margin-right: 0;
+            .el-form-item__label{
+                margin-bottom: 10px;
+                line-height: 20px;
+            }
+            .el-form-item__content{
+                width: 100%;
+            }
+        }
+        /*输入框前面有icon的form-item*/
+        .prefix-form-item{
+            margin-right: 0;
+            .el-input__prefix{
+                left: 12px;
+                top: 1px;
+                .svg-icon{
+                    font-size: 16px;
+                }
+            }
+            .el-input{
+                .el-input__inner{
+                    padding-left: 36px;
+                }
+            }
+        }
+        .item-operate{
+            .item-del{
+                float: right;
+                margin-left: 10px;
+                color: #f64a4a;
+                cursor: pointer;
+            }
+            .custom-search-input, .number-input-box{
+                overflow: hidden;
+            }
+        }
+    }
+    /*不嵌套el-from的表单*/
+    &.filter-form-box{
+        overflow: hidden;
+        color: #222;
+        font-size: 14px;
+        &>li{
+            width: 184px;
+            margin: 0 30px 16px 0;
+            float: left;
+            line-height: 38px;
+            .th{
+                float: left;
+                height: 38px;
+                width: 28px;
+                margin-right: 10px;
+            }
+            .td{
+                overflow: hidden;
+                .el-select{
+                    .el-input__inner{
+                        padding-right: 24px;
+                    }
+                }
+                /deep/.el-date-editor{
+                    width: 100%;
+                }
+            }
+            &.time{
+                width: 440px;
+                /deep/.el-range-separator {
+                    line-height: 38px;
+                }
+                /deep/.el-range-input{
+                    background: transparent;
+                    color: #222;
+                }
+            }
+        }
+    }
+}
+.clearfix-common {
+    &::after{
+        content: ".";       
+        display: block;       
+        height: 0;       
+        clear: both;       
+        visibility: hidden;  
+    }
+}
